@@ -14,5 +14,5 @@ jobs:
       - name: Build the spring-dem-argocd-docker Docker image
         run: |
           docker build . --tag ghcr.io/anhht1282/spring-demo-argocd:latest
-          docker run ghcr.io/anhht1282/spring-demo-argocd:latest
+#          docker run ghcr.io/anhht1282/spring-demo-argocd:latest
           docker push ghcr.io/anhht1282/spring-demo-argocd:latest
