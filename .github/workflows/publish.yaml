@@ -13,5 +13,5 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Build the spring-dem-argocd-docker Docker image
         run: |
-          docker build . --tag ghcr.io/anhht1282/spring-demo-argocd:latest
-          docker push ghcr.io/anhht1282/spring-demo-argocd:latest
+          docker build . --tag ghcr.io/anhht-bhsoft/spring-demo-argocd:latest
+          docker push ghcr.io/anhht-bhsoft/spring-demo-argocd:latest
