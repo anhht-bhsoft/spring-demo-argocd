@@ -5,13 +5,13 @@ publish-hello-docker-image:
 runs-on: ubuntu-latest
 steps:
   - uses: actions/checkout@v2
-  - name: Login to GitHub Container Registry
-uses: docker/login-action@v1
-with:
-registry: ghcr.io
-username: anhht1282
-password: ${{ secrets.GHCR_TOKEN }}
-  - name: Build the spring-dem-argocd-docker Docker image
+    name: Login to GitHub Container Registry
+  - uses: docker/login-action@v1
+    with:
+      registry: ghcr.io
+      username: anhht1282
+      password: ${{ secrets.GHCR_TOKEN }}
+    name: Build the spring-dem-argocd-docker Docker image
 run: |
   docker build . --tag ghcr.io/anhht1282/spring-demo-argocd:latest
   docker run ghcr.io/anhht1282/spring-demo-argocd:latest
